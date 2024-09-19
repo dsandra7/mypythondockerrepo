@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: my-python-app
-        image: rajcosivadevops/aksimage
+        image: ajcosivadevops/jenaksimage
         imagePullPolicy: Always
         ports:
         - containerPort: 5000
