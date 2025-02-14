@@ -6,15 +6,16 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      app: my-python-app
+      app: python-app
   template:
     metadata:
       labels:
-        app: my-python-app
+        app: python-app
     spec:
       containers:
       - name: mypythondockerrepo
         image: mylatest.azurecr.io/rajcocvs/mypythondockerrepo
+
         ports:
         - containerPort: 5000
 # service type loadbalancer       
@@ -22,10 +23,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-python-app-svc
+  name: python-app-svc
 spec:
   selector:
-    app: my-python-app
+    app: python-app
   ports:
     - protocol: TCP
       port: 5000
