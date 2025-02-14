@@ -12,13 +12,13 @@ spec:
       labels:
         app: python-app
     spec:
+      imagePullSecrets:
+      - name: acr-secret
       containers:
       - name: mypythondockerrepo
-        image: ncplcanadarajco.azurecr.io/rajcocvs/mypythondockerrepo
-        imagePullPolicy: Always
+        image: ncplcanadarajco.azurecr.io/rajcocvs/mypythondockerrepo:#{BuildId}#
         ports:
         - containerPort: 5000
-# service type loadbalancer       
 ---
 apiVersion: v1
 kind: Service
