@@ -14,7 +14,8 @@ spec:
     spec:
       containers:
       - name: mypythondockerrepo
-        image: ncplcanadarajco.azurecr.io/rajcocvs/mypythondockerrepo:#{Build.BuildId}#
+        image: ncplcanadarajco.azurecr.io/rajcocvs/mypythondockerrepo
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000
 # service type loadbalancer       
