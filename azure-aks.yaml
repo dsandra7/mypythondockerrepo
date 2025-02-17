@@ -16,7 +16,7 @@ spec:
       - name: acr-secret
       containers:
       - name: mypythondockerrepo
-        image: ncplcanadaregistry.azurecr.io/dsandra7/mypythondockerrepo:$(Build.BuildId)
+       image: ncplcanadaregistry.azurecr.io/dsandra7/mypythondockerrepo:latest
         ports:
         - containerPort: 5000
 ---
